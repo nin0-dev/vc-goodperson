@@ -1,6 +1,6 @@
 /*
  * Vencord, a modification for Discord's desktop app
- * Copyright (c) 2023 Vendicated and contributors
+ * Copyright (c) 2024 nin0dev
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,6 +18,7 @@
 
 import { addPreSendListener, removePreSendListener } from "@api/MessageEvents";
 import definePlugin from "@utils/types";
+import { Devs } from "@utils/constants";
 
 const badVerbs = ["fuck", " cum", "kill", "destroy"];
 const badNouns = ["cunt", "shit", "bullshit", "ass", "bitch", "nigga", "hell", "whore", "dick", "piss", "pussy", "slut", "tit", " fag", "cum", "cock", "retard", "blowjob", "bastard", "men", "man", "kotlin", "die", "sex", "nigger", "gay", "brainrot", "brainless", "mant", "manti", "mantik", "mantika", "mantikaf", "mantikafa", "mantikafas", "mantikafasi", "boykisser", "mewing", "mew", "skibidi", "gyat", "gyatt", "rizzler", "avast"];
