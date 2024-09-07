@@ -26,7 +26,7 @@ import { FluxDispatcher } from "@webpack/common";
 const badVerbsSexual = ["fuck", "cum"];
 const badNounsSexual = ["cunt", "yuri", "whore", "dick", "pussy", "slut", "tit", "cum", "cock", "blowjob", "sex", "ass", "furry", "bewbs", "boob", "booba", "boobies", "boobs", "booby", "porn", "pron", "pronhub", "r34", "rape", "raped", "raping", "rapist"];
 /** * FURRY ***/
-const badNounsFurry = ["meow", "miau", "mreow", "mrow", "woof", "nya", ":pleading_catgirl", "purr"];
+const badNounsFurry = ["meow", "miau", "mreow", "mrow", "woof", "nya", ":pleading_catgirl", "purr", "oomf", "oomfie"];
 const badRegexesFurry = ["mr*eo*w+, mr+p, nya+, mrow+, purr+"];
 /** * BRAINROT ***/
 const badNounsBrainrot = ["mewing", "mew", "skibidi", "gyat", "gyatt", "rizzler", "nettspend", "boykisser", "ohio", "rizz"];
