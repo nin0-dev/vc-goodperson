@@ -29,7 +29,7 @@ const badNounsSexual = ["cunt", "yuri", "whore", "dick", "pussy", "slut", "tit",
 const badNounsFurry = ["meow", "miau", "mreow", "mrow", "woof", "nya", ":pleading_catgirl", "purr", "oomf", "oomfie"];
 const badRegexesFurry = ["mr*eo*w+, mr+p, nya+, mrow+, purr+"];
 /** * BRAINROT ***/
-const badNounsBrainrot = ["mewing", "mew", "skibidi", "gyat", "gyatt", "rizzler", "nettspend", "boykisser", "ohio", "rizz"];
+const badNounsBrainrot = ["mewing", "mew", "skibidi", "gyat", "gyatt", "rizzler", "nettspend", "boykisser", "ohio", "rizz", "tickle my toes bruh"];
 /** * SLURS ***/
 const badNounsSlurs = ["retard", "faggot", "fag", "faggots", "fags", "retards", "n*g", "n*gg*", "n*gg*r"];
 const badRegexesSlurs = ["\\bn{1,}(i|!|1){1,}(b|g){2,}(a|@|e|3){1,}?"];
