@@ -26,10 +26,10 @@ import { FluxDispatcher } from "@webpack/common";
 const badVerbsSexual = ["fuck", "cum"];
 const badNounsSexual = ["cunt", "yuri", "whore", "dick", "pussy", "slut", "tit", "cum", "cock", "blowjob", "sex", "ass", "furry", "bewbs", "boob", "booba", "boobies", "boobs", "booby", "porn", "pron", "pronhub", "r34", "rape", "raped", "raping", "rapist"];
 /** * FURRY ***/
-const badNounsFurry = ["meow", "miau", "mreow", "mrow", "woof", "nya", ":pleading_catgirl", "purr", "oomf", "oomfie"];
+const badNounsFurry = ["<a:meowing:1284972816906846298>", "meowing", "meow", "miau", "mreow", "mrow", "woof", "nya", ":pleading_catgirl", "purr", "oomf", "oomfie"];
 const badRegexesFurry = ["mr*eo*w+, mr+p, nya+, mrow+, purr+"];
 /** * BRAINROT ***/
-const badNounsBrainrot = ["mewing", "mew", "skibidi", "gyat", "gyatt", "rizzler", "nettspend", "boykisser", "ohio", "rizz", "tickle my toes bruh"];
+const badNounsBrainrot = ["mewing", "mew", "skibidi", "gyat", "gyatt", "rizzler", "nettspend", "boykisser", "ohio", "rizz", "tickle my toes bruh", "crack my spine like a whip". "hawk tuah"];
 /** * SLURS ***/
 const badNounsSlurs = ["retard", "faggot", "fag", "faggots", "fags", "retards", "n*g", "n*gg*", "n*gg*r"];
 const badRegexesSlurs = ["\\bn{1,}(i|!|1){1,}(b|g){2,}(a|@|e|3){1,}?"];
