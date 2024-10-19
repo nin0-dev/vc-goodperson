@@ -37,7 +37,7 @@ const badRegexesSlurs = ["\\bn{1,}(i|!|1){1,}(b|g){2,}(a|@|e|3){1,}?"];
 const badVerbsGeneral = ["kill", "destroy"];
 const badNounsGeneral = ["shit", "bullshit", "bitch", "bastard", "die", "brainless"];
 /** * FUN ***/
-const badNounsFun = ["kotlin", "avast"];
+const badNounsFun = ["kotlin", "avast", "fres"];
 /** * REPLACEMENTS ***/
 const badVerbsReplacements = ["love", "eat", "deconstruct", "marry", "fart", "teach", "display", "plug", "explode", "undress", "finish", "freeze", "beat", "free", "brush", "allocate", "date", "melt", "breed", "educate", "injure", "change"];
 const badNounsReplacements = ["pasta", "kebab", "cake", "potato", "woman", "computer", "java", "hamburger", "monster truck", "osu!", "Ukrainian ball in search of gas game", "Anime", "Anime girl", "good", "keyboard", "NVIDIA RTX 3090 Graphics Card", "storm", "queen", "single", "umbrella", "mosque", "physics", "bath", "virus", "bathroom", "mom", "owner", "airport", "Avast Antivirus Free"];
