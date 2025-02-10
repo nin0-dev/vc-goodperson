@@ -1,20 +1,8 @@
 /*
- * Vencord, a modification for Discord's desktop app
- * Copyright (c) 2024 nin0dev
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <https://www.gnu.org/licenses/>.
-*/
+ * Vencord, a Discord client mod
+ * Copyright (c) 2025 Vendicated and contributors
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ */
 
 import { definePluginSettings } from "@api/Settings";
 import { Devs } from "@utils/constants";
@@ -113,8 +101,27 @@ export default definePlugin({
     },
     flux: {
         async MESSAGE_CREATE
-            ({ guildId, message }) {
+        ({ guildId, message }) {
+            if(Vencord.Plugins.plugins.GoodPerson.settings?.store.incoming) {
+                const msg = message;
+                // @ts-ignore
+                let newMessageContent = Vencord.Plugins.plugins.GoodPerson.replaceBadVerbs(Vencord.Plugins.plugins.GoodPerson.replaceBadNouns(msg.content));
+                if (message.content !== newMessageContent) {
+                    newMessageContent += "\n-# <:husk:1280158956341297225> **GoodPerson made this message good. Reload your client to clear changes**";
+                    msg.content = newMessageContent;
+                    FluxDispatcher.dispatch({
+                        type: "MESSAGE_UPDATE",
+                        message: msg,
+                        guildId
+                    });
+                }
+            }
+        },
+        async MESSAGE_UPDATE
+        ({ guildId, message }) {
+            if(Vencord.Plugins.plugins.GoodPerson.settings?.store.incoming) {
             const msg = message;
+            if(msg.content.includes("-# <:husk:1280158956341297225> **GoodPerson made this message good. Reload your client to clear changes**")) return;
             // @ts-ignore
             let newMessageContent = Vencord.Plugins.plugins.GoodPerson.replaceBadVerbs(Vencord.Plugins.plugins.GoodPerson.replaceBadNouns(msg.content));
             if (message.content !== newMessageContent) {
@@ -126,20 +133,6 @@ export default definePlugin({
                     guildId
                 });
             }
-        },
-        async MESSAGE_UPDATE
-            ({ guildId, message }) {
-            const msg = message;
-            // @ts-ignore
-            let newMessageContent = Vencord.Plugins.plugins.GoodPerson.replaceBadVerbs(Vencord.Plugins.plugins.GoodPerson.replaceBadNouns(msg.content));
-            if (message.content !== newMessageContent) {
-                newMessageContent += "\n-# <:husk:1280158956341297225> **GoodPerson made this message good. Reload your client to clear changes**";
-                msg.content = newMessageContent;
-                FluxDispatcher.dispatch({
-                    type: "MESSAGE_UPDATE",
-                    message: msg,
-                    guildId
-                });
             }
         }
     }
